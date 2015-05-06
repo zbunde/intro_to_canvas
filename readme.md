@@ -3,7 +3,7 @@
 The goal of this exercise is to create and use functions to paint on a canvas.
 Canvas is an html element that we can use to render graphs, draw game graphics, or animate things on the fly.
 
-## Pre-work / Warmup
+## Warmup
 - Read "Drawing on Canvas", "The Canvas Element", and "Filling and stroking"
 from chapter 16 in Eloquent Javascript.
 [reading](http://eloquentjavascript.net/16_canvas.html)
@@ -51,6 +51,7 @@ step 3: Set our canvas size. This gives us a dynamic way to interact with our ca
 ```
 var canvasSize = { x: canvas.width, y: canvas.height }
 ```
+
 step 4: Time to draw our border: Since we are interacting with 2d we have x and y for points.
 x: 0, y: 0 is the top left corner. If we want to draw a border around our canvas, we can use the strokeRect function. This takes 4 parameters. starting x, starting y, width, and height. Since we want our rectangle to fill our canvas we can use the size.x and size.y for our respective heights and widths.
 
@@ -60,7 +61,9 @@ x: 0, y: 0 is the top left corner. If we want to draw a border around our canvas
 context.strokeRect(0,0, size.x, size.y);
 
 ```
+
 step 5: All of it together:
+
 ```
 function drawBorder(){
     var canvas = document.getElementById("canvas");
@@ -74,7 +77,7 @@ function drawBorder(){
 
 
 
-### Iteration One: Drawing Rectangles 10:15 - 11:00
+## Iteration One: Drawing Rectangles 10:15 - 11:00
 
 - Drawing the border we used the function strokeRect. In order to draw filled in rectangles we are going to use another function, fillRect. It takes similar parameters but instead of drawing a border it will fill in the entire rectangle.
 
@@ -90,7 +93,8 @@ function drawBorder(){
 
 - Stretch: Do all of the painting dynamically based on the size of the canvas.
 
-### Iteration Two: Drawing with Buttons 11:00 - 2:00
+
+## Iteration Two: Drawing with Buttons 11:00 - 2:00
 
 - When a user clicks one of the color buttons on the page, we paint a rectangle within the canvas, in a random location of a random size(make sure the size isn't so large that it covers the canvas.)
 
@@ -104,7 +108,7 @@ function drawBorder(){
 
 - Stretch: Add incremental transparency to each rectangle so we are able to see the the ones behind each previous rectangle as they are painted.
 
-### Iteration Three: Fibonacci Art 2:00 - 4:00
+## Iteration Three: Fibonacci Art 2:00 - 4:00
 
 - get together in class at 2.
 
@@ -112,12 +116,6 @@ function drawBorder(){
 
 - there are three sides of this problem. the canvas / data visualization side, the solving of the actual equation and the handling of the user inputs.
 
-- Solving Fibonacci:
-    - Solving Fibonacci:
-      - Solving Fibonacci:
-        -  Solving Fibonacci:
-            -  Solving Fibonacci:
-                - Solving Fibonacci:
                     - Solving Fibonacci:
                         - Solving Fibonacci:
                           -  Solving Fibonacci:
@@ -137,20 +135,19 @@ function drawBorder(){
                                                                               - Solving Fibonacci:
 
 
-`
-```
+                  ```
 
-function fib(x) {
-    if (x === 0) {
-        return 0;
-    } else if (x === 1) {
-        return 1;
-    } else {
-        return fib(x-1)+fib(x-2);
-    }
-}
+                  function fib(x) {
+                      if (x === 0) {
+                          return 0;
+                      } else if (x === 1) {
+                          return 1;
+                      } else {
+                          return fib(x-1)+fib(x-2);
+                      }
+                  }
 
-```
+                  ```
 
 - We are going to pass the row to our function, and then paint a square for each number.
 
@@ -248,5 +245,6 @@ function fib(x) {
 - now we just need to call this function when our fibonacci button is pressed. We might need to first clear out other painted shapes and rectangles, it is up to you.
 - we can change the size of our canvas to be wide enough to look good with 15 rows.
 
-#### Stretch
-- Write a function that generates a random hexadecimal color, and use that for our randomly generated colors
+## Stretch
+- Write a function that generates a random hexadecimal color, and use that for our row colors
+- Write an interval function that adds a row each interval, counting up to 14, the canvas would start empty, and then each interval it would paint one row of the fibonacci sequence, while keeping the previously painted rows.
