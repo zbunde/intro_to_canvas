@@ -100,7 +100,7 @@ function drawBorder(){
 
 - When a user clicks "Clear Canvas" the canvas is cleared back to blank.
 
-- Stretch: Add Circles, when a use hits a button it is either a circle our a square of a random size, location, and color.
+- Stretch: Add Circles, when a use hits a button it is either a circle or a square of a random size, location, and color.
 
 - Stretch: Add incremental transparency to each rectangle so we are able to see the the ones behind each previous rectangle as they are painted.
 
