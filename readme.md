@@ -168,12 +168,12 @@ function fib(x) {
        ```
        - now when we want to fill in a square we can use the starting x,y and then use the pixel_size as the width and height. fillRect(0,0,pixel_size, pixel_size) would fill the first square.
 
-       - let's write a function called drawBlock that draws as individual block, that also takes a color:
+       - let's write a function called drawPixel that draws as individual block, that also takes a color:
 
        - make sure you have access to canvas and context in this function.
 
       ```
-       function drawBlock(x, y, color){
+       function drawPixel(x, y, color){
            context.fillStyle = color
            context.fillRect(x, y, pixel_size, pixel_size);
       }
@@ -182,11 +182,11 @@ function fib(x) {
 
        - go into console in your browser.
 
-       - write drawBlock(0,0 "red"), notice how it paints the first "pixel". Now
-       drawBlock(1,0, "green"), notice how it paints it really close to the first one. We need to account for this change by multiplying our coordinates by the pixel_size in our drawBlock function.
+       - write drawPixel(0,0 "red"), notice how it paints the first "pixel". Now
+       drawPixel(1,0, "green"), notice how it paints it really close to the first one. We need to account for this change by multiplying our coordinates by the pixel_size in our drawPixel function.
 
        ```
-       function drawBlock(x, y, color){
+       function drawPixel(x, y, color){
                 context.fillStyle = color
                 context.fillRect(x*pixel_size , y*pixel_size, pixel_size, pixel_size);
           }
@@ -195,28 +195,28 @@ function fib(x) {
        ```
        - Ok, again go into console:
 
-       - write drawBlock(0,0 "red"), notice how it paints the first "pixel". Now
-      drawBlock(1,0, "green"), it is set to the right of our first one and in a good position.
+       - write drawPixel(0,0 "red"), notice how it paints the first "pixel". Now
+      drawPixel(1,0, "green"), it is set to the right of our first one and in a good position.
 
       - Now we are going to write a function takes three parameters.
       One is the row, the other is the length, and color.  if we wanted to paint the first row up to 5 and green, we would call:
 
         drawRow(0,5, "green")
 
-      - We will print each pixel, up until we hit the rowLength, by using our drawBlock function and keeping the x value constant through each iteration.
+      - We will print each pixel, up until we hit the rowLength, by using our drawPixel function and keeping the x value constant through each iteration.
 
       ```
       function drawRow(rowNumber, rowLength){
             for(i = 0; i < rowLength; i++)
                   {
-                    drawBlock(rowNumber, i)
+                    drawPixel(rowNumber, i)
                   }
             }
 
       ```
 
        - Now we can write a drawFibonacci function that combines these things.
-          - We can count across each row and paint each block up to its fibonacci number, using our drawRow function.
+          - We can count across each row and paint each pixel up to its fibonacci number, using our drawRow function.
           - We will print up to the 14th number, starting at 1.
           -
 
@@ -231,7 +231,7 @@ function fib(x) {
 
             rowLength = fib(rowNumber);
 
-            // use our drawRow function to print each individual block, for each row.
+            // use our drawRow function to print each individual pixel, for each row.
 
            drawRow(rowNumber, rowLength, "orange");
 
