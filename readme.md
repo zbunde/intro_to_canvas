@@ -104,13 +104,32 @@ function drawBorder(){
 
 - When a user clicks "Clear Canvas" the canvas is cleared back to blank.
 
-- Stretch: Add Circles, when a use hits a button it is either a circle or a square of a random size, location, and color.
+-  Add a Circles function, and make it so when a user hits a button it is either a circle or a square of a random size, location, and color.
 
-- Stretch: Add incremental transparency to each rectangle so we are able to see the the ones behind each previous rectangle as they are painted.
+- Add incremental transparency to each rectangle so we are able to see the the ones behind each previous rectangle as they are painted. Checkout globalalpha for canvas.
 
-## Iteration Three: Fibonacci Art 2:00 - 4:00
 
-- get together in class at 2.
+
+
+## Iteration Three: Keyboard Art 3:00 - 4:00
+- Write a function that creates a random hexadecimal color.
+    -  "0123456789ABCDEF" are the possible chars.
+    - it begins with a "#" and is 6 chars long.
+
+- use this function to generate random colors for all of your shapes.
+
+- Bind the "c" key to your draw circle function
+- Bind the "r" key to your draw rectangle function.
+- Bind the "t" key to a new function that draws a Triangle with a random size/location/color.
+- Bind the "d" key to a new function that draws a Diamond with random size/location/color. Checkout the rotate function.
+- Now we can play our keyboard and it will draw on our canvas.
+
+
+
+
+
+
+## Iteration Four: Fibonacci Art 3:00 - 4:00
 
 - we are going to draw the fibonacci sequence on a canvas, up to 14,  when a user presses the fibonacci button.
 
